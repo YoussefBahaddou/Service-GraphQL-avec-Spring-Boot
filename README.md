@@ -1,8 +1,34 @@
+# Bank GraphQL Service
 
+## Overview
+A GraphQL API for bank account management using Spring Boot and Spring GraphQL.
+Refactored by **Youssef Bahaddou**.
 
-https://github.com/user-attachments/assets/8ed78d54-ebe3-48ed-ba33-75a66544fed5
+## Features
+- **GraphQL API**: Query and Mutate data efficiently.
+- **H2 Database**: In-memory storage.
+- **Transactions**: Manage deposits and withdrawals.
 
+## Schema
+See \src/main/resources/graphql/schema.graphqls\ for full definition.
 
+## Queries (Example)
+\\\graphql
+query {
+  allAccounts {
+    id
+    balance
+    type
+  }
+}
+\\\
 
-https://github.com/user-attachments/assets/73532601-4d73-4f6f-b8a5-3b3306cf5f3b
+## Run
+\\\ash
+mvn spring-boot:run
+\\\
+Then access \http://localhost:8082/graphiql\
+
+## Author
+Youssef Bahaddou
 

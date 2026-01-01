@@ -1,4 +1,4 @@
-package com.example.banqueservice;
+package com.youssef.graphql.service;
 import graphql.ErrorClassification;
 import graphql.GraphQLError;
 import graphql.language.SourceLocation;
@@ -29,3 +29,4 @@ public class GraphQLExceptionHandler extends DataFetcherExceptionResolverAdapter
         };
     }
 }
+

@@ -1,6 +1,6 @@
-package com.example.banqueservice.entities;
+package com.youssef.graphql.service.model;
 
-import com.example.banqueservice.enums.TypeCompte;
+import com.youssef.graphql.service.model.enums.AccountType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,15 +11,16 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Compte {
+public class BankAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double solde;
+    private double balance;
 
     @Temporal(TemporalType.DATE)
-    private Date dateCreation;
+    private Date creationDate;
 
     @Enumerated(EnumType.STRING)
-    private TypeCompte type;
+    private TypeBankAccount type;
 }
+
